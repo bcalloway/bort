@@ -48,7 +48,16 @@ Rails::Initializer.run do |config|
               :source => "http://gems.github.com"
   config.gem "thoughtbot-shoulda",
               :lib => "shoulda",
-              :source => "http://gems.github.com" 
+              :source => "http://gems.github.com"
+  config.gem "thoughtbot-quietbacktrace",
+              :lib => "quietbacktrace",
+              :source => "http://gems.github.com"
+  config.gem "thoughtbot-hoptoad_notifier",
+              :lib => "hoptoad_notifier",
+              :source => "http://gems.github.com"
+  config.gem "thoughtbot-paperclip",
+              :lib => "paperclip",
+              :source => "http://gems.github.com"
   # These cause problems with irb. Left in for reference
   # config.gem 'rspec-rails', :lib => 'spec/rails', :version => '1.1.11'
   # config.gem 'rspec', :lib => 'spec', :version => '1.1.11'
