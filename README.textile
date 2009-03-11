@@ -1,8 +1,12 @@
+h1. Fork of the original bort base Rails app
+
+Changes noted below.
+
 !http://clients.fudgestudios.com/chester.jpg!
 
 h1. Bort
 
-Bort is a base Rails 2.2 application that makes creating new projects easier and faster. Bort is developed and maintained by "Fudge Studios":http://www.fudgestudios.com, "Jim Neath":http://jimneath.org and "Matt Hall":http://matthall.wordpress.com
+Bort is a base Rails 2.2.2 application that makes creating new projects easier and faster. Bort is developed and maintained by "Fudge Studios":http://www.fudgestudios.com, "Jim Neath":http://jimneath.org and "Matt Hall":http://matthall.wordpress.com
 
 If you have any suggestions for improvements then feel free to leave a request on "User Voice":http://bort.uservoice.com
 
@@ -15,7 +19,7 @@ h2. Install
 * Rake db:migrate
 * Have a brew and celebrate
 
-h2. Plugins Installed
+h2. Plugin Gems Installed
 
 Bort comes with a few commonly used plugins installed and already setup.
 
@@ -44,7 +48,7 @@ h3. Rspec & Rspec-rails
 You should be testing your code, so Bort comes with Rspec and Rspec-rails already installed so you're
 ready to roll.
 
-h3. Exception Notifier
+h3. Hoptoad Exception Notifier
 
 You don't want your applications to crash and burn so Exception Notifier is already installed to let 
 you know when everything goes to shit.
@@ -79,6 +83,11 @@ More info on capistrano-ext/multistage deployments can be found here: http://web
 h2. Uses the Database for Sessions
 
 Bort is setup to use the database to store sessions by default. 
+
+h1. Gems Installed
+
+
+
 
 h2. Misc 
 
