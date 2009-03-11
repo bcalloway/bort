@@ -42,6 +42,11 @@ Rails::Initializer.run do |config|
               :lib => 'aasm',
               :source => 'http://gems.github.com',
               :version => '2.0.5'
+  config.gem 'mocha', 
+              :lib => 'mocha',
+              :source => 'http://gems.github.com'
+  config.gem "newrelic_rpm" 
+
   # Thoughtbot gems
   config.gem "thoughtbot-factory_girl",
               :lib    => "factory_girl",

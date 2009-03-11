@@ -1,7 +1,8 @@
 set :stages, %w(staging production)
-set :default_stage, "production"
+set :default_stage, "staging"
 require File.expand_path("#{File.dirname(__FILE__)}/../vendor/gems/capistrano-ext-1.2.1/lib/capistrano/ext/multistage")
 
+before "deploy:setup", "db:password"
 
 namespace :db do
   desc 'Dumps the production database to db/production_data.sql on the remote server'
@@ -33,5 +34,18 @@ namespace :db do
     remote_db_dump
     remote_db_download
     remote_db_cleanup
+  end
+end
+
+#############################################################
+# Database Password
+#############################################################
+
+namespace :db do
+  desc "Create database password in shared path" 
+  task :password do
+    set :db_password, Proc.new { Capistrano::CLI.password_prompt("Remote database password: ") }
+    run "mkdir -p #{shared_path}/config" 
+    put db_password, "#{shared_path}/config/dbpassword" 
   end
 end

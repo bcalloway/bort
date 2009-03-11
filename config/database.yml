@@ -5,7 +5,7 @@ development:
   username: root
   password:
   pool: 5
-  socket: /var/mysql/mysock.sock
+  socket: /var/mysql/mysql.sock
   
 test:
   adapter: mysql
@@ -14,7 +14,7 @@ test:
   username: root
   password:
   pool: 5
-  socket: /var/mysql/mysock.sock
+  socket: /var/mysql/mysql.sock
   
 staging:
   adapter: mysql
